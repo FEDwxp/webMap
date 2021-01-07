@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-27 17:40:59
- * @LastEditTime: 2021-01-07 15:50:07
+ * @LastEditTime: 2021-01-07 16:00:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /ant-wt/Users/fedwxp/Desktop/dev work/webMap/README.md
@@ -41,6 +41,9 @@ gulp
 ```
 gulp build
 ```
- ![image](https://github.com/FEDwxp/webMap/raw/master/public/WechatIMG141.png)
- ![image](https://github.com/FEDwxp/webMap/raw/master/public/WechatIMG140.png)
- ![image](https://github.com/FEDwxp/webMap/raw/master/public/WechatIMG139.png)
+## PC端
+ ![image](https://github.com/FEDwxp/webMap/blob/main/public/pc.png)
+## 移动端
+
+ ![image](https://github.com/FEDwxp/webMap/blob/main/public/phone.png)
+ ![image](https://github.com/FEDwxp/webMap/blob/main/public/phone1.png)
