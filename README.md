@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-27 17:40:59
- * @LastEditTime: 2020-11-30 14:42:50
+ * @LastEditTime: 2021-01-07 15:50:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /ant-wt/Users/fedwxp/Desktop/dev work/webMap/README.md
@@ -10,6 +10,8 @@
 
 ## 项目查看地址  http://49.232.203.212/
 ## 使用juqery.js 
+## 使用mui.js 
+## 使用mui.css 
 ## Bootstrap.js Bootstrap.css
 ## 使用gulp 配置代理，方便本地开发
 ## 使用bigmap地图的api 

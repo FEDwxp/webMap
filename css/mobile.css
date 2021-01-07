@@ -1,0 +1,761 @@
+/*reset.css用来存储清除浏览器的样式 ,后面添加了一部分通用样式*/
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-modify: read-only;
+    cursor: pointer;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+del,
+ins {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: baseline;
+}
+
+sub {
+    vertical-align: baseline;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+    color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,
+button,
+textarea,
+select {
+    *font-size: 100%;
+    outline: none;
+}
+
+/*select*/
+select {
+    /*复写Chrome和Firefox里面的边框*/
+    border: 1px solid green;
+    /*清除默认样式*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    /*background: url(../img/icon/icon_select.png) no-repeat scroll right center transparent;*/
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+    display: none;
+}
+
+/* 个人在后面添加了一些常用的公共样式 */
+/*居中效果*/
+.margin_center {
+    margin: 0px auto;
+}
+
+/*浮动*/
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+/*文字位置*/
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+/*position*/
+.position_relative {
+    position: relative;
+}
+
+.position_absolute {
+    position: absolute;
+}
+
+/*边框*/
+.no_border {
+    border: 0px !important;
+    border-right: 0px !important;
+}
+
+/*宽度*/
+.width_whole {
+    width: 100%;
+}
+
+/*清除格式*/
+.clear_both {
+    clear: both;
+}
+
+.no_margin {
+    margin: 0px !important;
+}
+
+/* 展示样式 */
+.display_block {
+    display: block;
+}
+
+.display_none {
+    display: none;
+}
+
+.visibility_hidden {
+    visibility: hidden;
+}
+
+/*清除浮动*/
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+/* IE6 */
+*+html .clearfix {
+    zoom: 1;
+}
+
+/* IE7 */
+
+body {
+    font-family: 'PingFangSC', 'helvetica neue', 'hiragino sans gb', 'arial', 'microsoft yahei ui', 'microsoft yahei', 'simsun', 'sans-serif' !important;
+    font-size: 10px;
+}
+
+.nav_container {
+    position: fixed;
+    right: .05rem;
+    top: 10%;
+    border-radius: .03rem;
+    background-color:rgba(0, 0, 0, .6);
+}
+
+.operation-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: .05rem; */
+    padding: .03rem;
+    border-radius: .05rem;
+    font-size: .12rem;
+    color: #ffff;
+    cursor: pointer;
+    transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(0.8, 0.8);
+    /* Safari and Chrome */
+}
+
+.operation_btn_active_b {
+    border: .01rem solid #fff;
+    /* box-shadow: -1px -1px 4px #000; */
+}
+
+.operation_btn_active_f {
+    border: .01rem solid #fff;
+    /* box-shadow: -1px -1px 4px #fff; */
+}
+
+.operation-btn .operation_img {
+    width: .2rem;
+    margin-bottom: .05rem;
+    object-fit: contain;
+}
+
+.btn-building {
+    background-color: #3ca2e0;
+}
+
+.btn-building1 {
+    background-color: #f0ad4e;
+}
+
+.btn-businessDistrict {
+    background-color: #5582f6;
+}
+
+.btn-wangdian {
+    background-color: #fb0808;
+}
+
+.btn-yunshu {
+    background-color: #00d607;
+}
+.shopName_active {
+    background-color: #eee;
+    border-radius: .05rem;
+}
+
+.toolcontent {
+    z-index: 2;
+    position: fixed;
+    width: .3rem;
+    height: .3rem;
+    line-height: .3rem;
+    right: .1rem;
+    bottom: 22%;
+    text-align: center;
+    /* background: url(../img/window.png) no-repeat;
+    background-size: contain; */
+    background-color: #fff;
+}
+
+.toolcontent img {
+    width: .25rem;
+    object-fit: contain;
+}
+
+.iconTpye {
+    width: .16rem;
+    margin-right: .03rem;
+}
+
+.colorItem {
+    display: flex;
+    align-items: center;
+    margin-left: .03rem;
+}
+
+.colorName {
+    font-size: .12rem;
+}
+
+.colorBox {
+    width: .1rem;
+    height: .1rem;
+}
+
+.colorBox1 {
+    background-color: #92D050;
+}
+
+.colorBox2 {
+    background-color: #9CC3E6;
+}
+
+.colorBox3 {
+    background-color: #FFC000;
+}
+
+.colorBox4 {
+    background-color: #FF0000;
+}
+
+.colorContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .05rem;
+    background-color: #F8F8F8;
+}
+
+.controlBox {
+    position: fixed;
+    right: .1rem;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.add,
+.sub {
+    text-align: center;
+    height: .3rem;
+    line-height: .3rem;
+    width: .3rem;
+    cursor: pointer;
+    background: #fff;
+}
+
+.add {
+    border-bottom: 1px solid #eee;
+}
+
+/* .sub {
+	border-top: 1px solid #eee;
+} */
+
+.seachContent {
+    width: 100%;
+    position: fixed;
+    padding: .06rem .12rem;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    background-color: rgba(238, 238, 238, 0.8);
+    box-shadow: 1px 1px 4px #eee;
+    display: none;
+}
+
+.seachinput {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.screen {
+    display: none;
+    margin-top: .06rem;
+}
+
+.screen_shequ {
+    display: none;
+}
+
+.screen input {
+    width: 100%;
+    border: none;
+    border-radius: .2rem;
+    padding: 0.05rem .1rem;
+    outline: none;
+    margin: 0;
+    height: auto;
+}
+
+.seachinput input {
+    width: 80%;
+    border: none;
+    border-radius: .2rem;
+    padding: 0.05rem .1rem;
+    outline: none;
+    margin: 0;
+    height: auto;
+}
+
+
+.more {
+    font-size: .12rem;
+}
+
+.more span {
+    font-size: .12rem;
+}
+
+.seach_business {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seach_shopend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seach_shoping {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.screen,
+.seach_item {
+    display: none;
+    width: 100%;
+}
+
+.seach_shoping input,
+.seach_shopend input {
+    width: 48%;
+}
+
+.footInfoContext {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 85%;
+    bottom: -85%;
+    /* bottom: 0%; */
+    left: 0;
+    transition: bottom .5s;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
+    overflow: hidden;
+    z-index: 3000;
+}
+.screen_quxian_business {
+    width: 100%;
+}
+
+.footInfoContextTitle {
+    padding: .05rem .1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.footInfoContextBody {
+    overflow: auto;
+    padding: .1rem;
+    height: 100%;
+    padding-bottom: .4rem;
+}
+
+.bigemap-top,
+.bigemap-bottom {
+    z-index: 140 !important;
+}
+
+.new-detail-head {
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: .05rem;
+}
+
+.new-detail-label {
+    display: inline-block;
+    flex: 3;
+    font-size: .13rem;
+    text-align: right;
+    background: #f5f8fa;
+    color: #666666;
+}
+
+.new-detail-field {
+    display: inline-block;
+    flex: 6;
+    font-size: .13rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: .1rem;
+}
+
+.jj {
+    border-top: 1px solid #eee;
+    margin-top: .12rem;
+    width: 100%;
+    padding: .12rem;
+    font-size: .14rem
+}
+
+.jj h3 {
+    margin: 0;
+    margin-bottom: .12rem;
+    font-size: .18rem;
+}
+
+.footInfoContextName {
+    font-size: .15rem;
+    width: 80%;
+    overflow: hidden;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buidImgBOX {
+    display: flex;
+    align-items: center;
+    padding: 0 .1rem;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.buidImg {
+    width: 48.5%;
+    cursor: pointer;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.footInfoList {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 60%;
+    bottom: -60%;
+    /* bottom: 0%; */
+    left: 0;
+    transition: bottom 1s;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.footInfoList ul {
+    padding: .05rem.1rem;
+    overflow: auto;
+    height: 100%;
+    position: relative;
+}
+
+.footInfoContextBody {
+    position: relative;
+}
+
+.lodding_info {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footInfoListTitle {
+    text-align: center;
+    border-bottom: .01rem solid #eee;
+    /* height: .3rem; */
+    /* line-height: .3rem; */
+    width: 100%;
+}
+
+.InfoItem .moreInfo {
+    font-size: .20rem;
+}
+
+.footInfoListTitleup {
+    display: none;
+}
+
+.InfoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: .1rem;
+}
+
+.shopName {
+    flex: 2;
+}
+
+.addressName {
+    flex: 3;
+}
+
+.shopName,
+.addressName {
+    font-size: .16rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.moreInfo {
+    margin-left: .1rem;
+}
+
+.pictureBox {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	z-index: 3999;
+	display: none;
+}
+.pictureContent {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    /* width: 340px; */
+    height: 60%;
+    width: 100%;
+}
+.bigPic {
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pictureShow {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.pictureBox  .glyphicon {
+	font-size: .2rem;
+	color: #fff;
+	position: fixed;
+	right: .1rem;
+	top:.1rem;
+}
+.picturePanel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.loddingContent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background-color: #000000a9;
+    transition: all 1s;
+    display: none;
+}
+
+.loddingmsg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: .14rem;
+}
